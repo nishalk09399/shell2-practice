@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "hello"
+echo -e "\e [31m]hello"
 
