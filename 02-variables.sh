@@ -1,5 +1,8 @@
 #!/bin/bash
 
-a =10
+DATE=$(date)
 
-b=20
+# person1=$1 
+# person2=$2
+
+echo "Hellow thi is executed at the time at: DATE"
