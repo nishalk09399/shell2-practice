@@ -13,4 +13,4 @@ then
 fi
 
 
-yum install mysqllll -y
+yum install mysql -y
