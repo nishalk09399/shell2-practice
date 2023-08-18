@@ -1,7 +1,12 @@
 #!/bin/bash
 
-DATE=$(date +%Y-%m-%d)
+DATE=$(date +%F-%H-%M-%S)
+
+SCRIPT_NAME=$0
+
 USERID=$(id -u)
+
+LOG_FILE=/tmp/$SCRIPT_NAME-$DATE.log
 
 VALIDATE(){
 
