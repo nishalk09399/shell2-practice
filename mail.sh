@@ -11,6 +11,6 @@ ALERT_TYPE=$5
 
 #echo "all arguments: $@"
 
-FINAL_BODY=$(sed -e 's/TEAM_NAME/DevOps Team/g' -e 's/ALERT_TYPE/High disk usage/g' -e "s/MESSAGE/$BODY" template.html)
+FINAL_BODY=$(sed -e "s/TEAM_NAME/$TEAM_NAME/g" -e "s/ALERT_TYPE//g" -e "s/MESSAGE/$BODY/g" template.html)
 
-echo  "$FINAL_BODY" | mail -s "$SUBJECT" $TO_ADDRESS
+echo  "$FINAL_BODY" | mail -s "$SUBJECT" "$TO_ADDRESS"
