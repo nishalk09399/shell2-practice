@@ -18,7 +18,8 @@ N="\e[0m"
 DISK_USAGE=$(df -hT | grep -vE 'tmpfs|Filesystem')
 DISK_USAGE_TRESHOLD=1
 
-While IFS= read line
+while IFS= read line
 do
     echo "output: $line"
+    
 done <<< $DISK_USAGE
