@@ -20,6 +20,19 @@ DISK_USAGE_TRESHOLD=1
 
 while IFS= read line
 do
-    echo "output: $line"
-    
+    #this command will give you disk usage in number format for comparision
+    usage=$(echo $line | awk '{print $6}' | cut -d % -f1)
+
+    #this command will give you the which partioner is consuming memory
+    partition=$(echo $line | awk '{print $1}')
+
+    #now you need to check wheather it is more then treshold or not
+    if [ $usage -gt $DISK_USAGE_TRESHOLD ]
+    then
+        message+="HIGH DISK USAGE ON $partition: $usage
+
+    fi
+
 done <<< $DISK_USAGE
+
+echo "message: $message"
