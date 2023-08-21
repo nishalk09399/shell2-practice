@@ -1,9 +1,10 @@
 #!/bin/bash
 
 USERID=$(id -u)
+RED= '\033[0;31m' 
 
 if [ $USERID -ne 0 ]
 then
-   echo "Run the command with your root access"
+   echo "$RED -e Run the command with your root access"
    exit 1
 fi
