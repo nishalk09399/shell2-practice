@@ -1,7 +1,7 @@
 #!/bin/bash
 
 USERID=$(id -u)
-RED= '\033[0;31m' 
+R="\e[31m" 
 
 if [ $USERID -ne 0 ]
 then
