@@ -29,10 +29,10 @@ do
     #now you need to check wheather it is more then treshold or not
     if [ $usage -gt $DISK_USAGE_TRESHOLD ];
     then
-        message+="HIGH DISK USAGE ON $partition: $usage"
+        message+="HIGH DISK USAGE ON $partition: $usage \n"
 
     fi
 
 done <<< $DISK_USAGE
 
-echo "message: $message"
+echo -e "message: $message"
