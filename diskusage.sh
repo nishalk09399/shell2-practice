@@ -1,8 +1,8 @@
 #!/bin/bash
 
-colors
-validations
-log redirections
+# colors
+# validations
+# log redirections
 
 LOGFILE_DIRECTORY=/tmp
 DATE=$(date +%F:%H:%M:%S)
