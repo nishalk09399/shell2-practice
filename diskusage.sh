@@ -27,9 +27,9 @@ do
     partition=$(echo $line | awk '{print $1}')
 
     #now you need to check wheather it is more then treshold or not
-    if [ $usage -gt $DISK_USAGE_TRESHOLD ]
+    if [ $usage -gt $DISK_USAGE_TRESHOLD ];
     then
-        message+="HIGH DISK USAGE ON $partition: $usage
+        message+="HIGH DISK USAGE ON $partition: $usage"
 
     fi
 
