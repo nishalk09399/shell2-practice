@@ -1,5 +1,10 @@
 #!/bin/bash
 
+
+DATE=$(date +%F)
+SCRIPT_NAME=$0
+LOG_DIR=/home/centos/shellpractice-logs
+LOG_FILE=$LOG_DIR/$0-$DATE.log
 USERID=$(id -u)
 R="\e[31m" 
 
